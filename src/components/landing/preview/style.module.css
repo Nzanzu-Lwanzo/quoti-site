@@ -1,0 +1,141 @@
+.section {
+    height: 100dvh;
+    padding: 4rem 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+.quote_1,
+.quote_2,
+.quote_3 {
+    border-radius: 6px;
+    padding: 1rem 3rem;
+
+    .rank {
+        align-self: flex-start;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        display: inline-block;
+    }
+
+    .quote__text {
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 4rem;
+    }
+
+    .meta__infos {
+        width: 100%;
+        margin-top: 1rem;
+        padding-block: 1rem;
+
+        .author__name,
+        .book__title {
+            font-weight: bold;
+        }
+    }
+}
+
+.quote_1 {
+    grid-column: 1/4;
+    grid-row: 2/5;
+    background-color: var(--accent);
+    font-size: 1.5rem;
+
+    .meta__infos {
+        border-top: 3px solid var(--standout);
+
+        .author__name,
+        .book__title {
+            color: var(--standout);
+        }
+    }
+
+}
+
+.quote_2 {
+    grid-column: 4/7;
+    grid-row: 1/4;
+    background-color: var(--standout);
+    color: #FFF;
+
+    .meta__infos {
+        border-top: 3px solid var(--accent);
+
+        .author__name,
+        .book__title {
+            color: var(--accent);
+        }
+    }
+}
+
+.quote_3 {
+    grid-column: 5/8;
+    grid-row: 4/8;
+    background-color: var(--dark);
+    color: var(--accent);
+
+    .meta__infos {
+        border-top: 3px solid #FFF;
+
+        .author__name,
+        .book__title {
+            color: #FFF;
+        }
+    }
+
+}
+
+
+/* MEDIA QUERIES */
+@media only all and (max-width:1450px) {
+
+    .quote_1,
+    .quote_2,
+    .quote_3 {
+        .quote__text {
+            font-size: 2.3rem;
+            line-height: 3rem;
+        }
+    }
+
+    .quote_1 {
+        grid-column: 3/6;
+        grid-row: 1/4;
+    }
+
+    .quote_2 {
+        grid-column: 1/4;
+        grid-row: 4/8;
+    }
+}
+
+@media only all and (max-width:1080px) {
+    .section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .quote_1,
+    .quote_2,
+    .quote_3 {
+        padding-block: 2rem;
+        align-items: flex-start;
+    }
+}
+
+@media only all and (max-width:500px) {
+
+    .quote_1,
+    .quote_2,
+    .quote_3 {
+        padding-inline: 2rem;
+        .quote__text{
+            font-size: 1.4rem;
+            line-height: 2rem;
+        }
+    }
+}

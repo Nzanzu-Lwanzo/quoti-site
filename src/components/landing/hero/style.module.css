@@ -1,0 +1,49 @@
+.section {
+    width: 100%;
+    height: 100dvh;
+    background-color: #000;
+    background: url('/img/gradient-lcp.jpg')no-repeat center/cover;
+}
+
+.hero__content {
+    padding: 2rem 1rem;
+    width: 800px;
+    margin: auto;
+    height: 100%;
+    gap: 1rem;
+}
+
+.hero__big__title {
+    font-size: 4rem;
+    color: #FFF;
+    text-align: center;
+    line-height: 4.7rem;
+    font-weight: bold;
+}
+
+.important__text {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    font-size: .9rem;
+    padding: .5rem 1rem;
+    background-color: var(--accent);
+    border-radius: 25px;
+    color: var(--background);
+
+    .cta__icon {
+        transition: .3s ease-out;
+    }
+
+    &:hover {
+        .cta__icon {
+            transform: translateX(3px);
+        }
+    }
+}
