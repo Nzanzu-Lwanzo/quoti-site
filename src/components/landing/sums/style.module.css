@@ -1,0 +1,99 @@
+.section {
+    min-height: 80dvh;
+    background-color: var(--dark);
+    display: flex;
+    align-items: stretch;
+    gap: 1rem;
+    padding: 3rem 2rem;
+}
+
+.sum {
+    min-height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 1rem;
+
+    .book_title {
+        font-weight: bold;
+    }
+
+    .text {
+        font-size: 1rem;
+        line-height: 1.6rem;
+    }
+
+    .meta__infos {
+        font-size: .9rem;
+    }
+}
+
+.sum_1 {
+    background-color: var(--accent);
+    color: var(--dark);
+
+    .book_title,
+    .author__name,
+    .publish__year {
+        color: var(--standout);
+        font-weight: bold;
+    }
+}
+
+.sum_2 {
+    background-color: var(--standout);
+    color: #FFF;
+
+    .book_title,
+    .author__name,
+    .publish__year {
+        color: var(--accent);
+        font-weight: bold;
+    }
+}
+
+.sum_3 {
+    background-color: var(--background);
+    color: #FFF;
+
+    .book_title,
+    .author__name,
+    .publish__year {
+        color: var(--standout);
+        font-weight: bold;
+    }
+}
+
+/* MEDIA QUERIES */
+@media only all and (max-width:1650px) {
+    .section {
+        flex-wrap: wrap;
+    }
+}
+
+@media only all and (max-width:600px)  {
+    .section {
+        padding: 0;
+        gap: 0;
+    }
+
+    .sum {
+        padding: 2rem 1rem;
+        gap: .5rem;
+        border-radius: 0;
+
+        .book_title {
+            font-size: 1.2rem;
+        }
+
+        .text {
+            font-size: .9rem;
+            line-height: 1.2rem;
+        }
+    }
+}

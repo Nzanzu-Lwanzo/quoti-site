@@ -47,3 +47,29 @@
         }
     }
 }
+
+
+/* MEDIA QUERIES */
+@media only all and (max-width:800px) {
+
+    .hero__content {
+        width: 100%;
+        padding-inline: 2rem;
+    }
+
+    .hero__big__title {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+}
+
+@media only all and (max-width:425px) {
+    .section {
+        height: 40dvh;
+    }
+
+    .hero__big__title {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+}

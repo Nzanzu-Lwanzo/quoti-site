@@ -117,6 +117,7 @@
     .section {
         display: flex;
         flex-direction: column;
+        height: fit-content;
     }
 
     .quote_1,
@@ -129,13 +130,22 @@
 
 @media only all and (max-width:500px) {
 
+    .section {
+        padding: 1rem;
+    }
+
     .quote_1,
     .quote_2,
     .quote_3 {
-        padding-inline: 2rem;
+        padding-inline: 1rem;
         .quote__text{
-            font-size: 1.4rem;
-            line-height: 2rem;
+            font-size: 1.2rem;
+            line-height: 1.7rem;
+        }
+
+        .meta__infos {
+            margin-top: .5rem;
+            font-size: .9rem;
         }
     }
 }
